@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -136,7 +137,7 @@
         <h1 class="cover-title">
           กำหนดให้<br>สำนักงานที่ดินจังหวัดอ่างทอง<br>เป็นสำนักงานที่ดินอิเล็กทรอนิกส์<br>ต่างสำนักงานแบบออนไลน์</h1>
         <p class="cover-subtitle">
-          ผู้มีที่ดินในจังหวัดอ่างทองสามารถยื่นคำขอจดทะเบียนสิทธิและนิติกรรม ณ สำนักงานที่ดินที่ประกาศรองรับได้
+          ผู้มีที่ดินในจังหวัดอ่างทองสามารถยื่นคำขอจดทะเบียนสิทธิและนิติกรรม ณ สำนักงานที่ดิน<br>ที่ประกาศรองรับได้
         </p>
       </div>
 
@@ -145,7 +146,7 @@
           <i class="ph ph-seal-warning"></i>
           <span class="stamp-label">มีผลบังคับใช้ตั้งแต่</span>
           <strong class="notice-date">18 พฤษภาคม 2569</strong>
-          <span class="stamp-note">จองคิวและยื่นคำขอผ่านระบบ e-QLands ก่อนเข้ารับบริการ</span>
+          <span class="stamp-note">จองคิวและยื่นคำขอผ่านระบบ e-QLands ก่อนเข้ารับบริการเท่านั้น</span>
         </div>
       </div>
 
@@ -171,13 +172,13 @@
       </h2>
       <p class="lead">
         ให้ดู 3 เงื่อนไขพร้อมกัน: ประเภทเอกสาร ประเภทธุรกรรม และตัวผู้ดำเนินการ
-        หากครบตามนี้จึงเหมาะกับบริการต่างสำนักงานแบบออนไลน์
+        หากครบตามนี้จึงเหมาะกับบริการ<br>ต่างสำนักงานแบบออนไลน์
       </p>
 
       <div class="callout info">
         <strong>ใช้ได้</strong>
         <p>หนังสือแสดงสิทธิในที่ดินประเภท <strong>โฉนดที่ดิน</strong>
-          และเป็นงานจดทะเบียนสิทธิหรือนิติกรรมที่ไม่ต้องประกาศและไม่ต้องรังวัด</p>
+          และเป็นประเภทจดทะเบียนสิทธิและนิติกรรมที่ <strong>ไม่ต้องประกาศ</strong><br>และ <strong>ไม่ต้องรังวัด</strong></p>
         <div class="chip-list">
           <span class="chip">โฉนดที่ดิน</span>
           <span class="chip">จดทะเบียนสิทธิ</span>
@@ -188,7 +189,7 @@
 
       <div class="callout danger">
         <strong>ยังไม่เข้าเงื่อนไข</strong>
-        <p>รายการที่ต้องมีการประกาศหรือรังวัดต้องดำเนินการตามกระบวนงานปกติ เพราะต้องตรวจสอบพื้นที่และขั้นตอนเพิ่มเติม
+        <p>รายการที่ต้องมีการประกาศหรือรังวัดต้องดำเนินการตามกระบวนงานปกติ เพราะต้องตรวจสอบพื้นที่และขั้นตอน<br>เพิ่มเติม
         </p>
         <div class="chip-list">
           <span class="chip no">ต้องประกาศ</span>
@@ -199,13 +200,13 @@
 
       <div class="callout warning">
         <strong>การมอบอำนาจ</strong>
-        <p>ประชาชนทั่วไปต้องไปดำเนินการด้วยตนเอง ไม่สามารถมอบอำนาจได้</p>
+        <p>ประชาชนทั่วไปต้องไปดำเนินการด้วยตนเอง ไม่สามารถ<br>มอบอำนาจได้</p>
       </div>
 
       <div class="callout info">
         <strong>ข้อยกเว้นเฉพาะกรณี</strong>
-        <p>หน่วยงานของรัฐ รัฐวิสาหกิจ องค์การรัฐบาล และสถาบันการเงิน
-          สามารถมอบอำนาจได้เฉพาะการจดทะเบียนสิทธิและนิติกรรมเกี่ยวกับ <strong>การจำนอง</strong> เท่านั้น</p>
+        <p>หน่วยงานของรัฐ รัฐวิสาหกิจ องค์การรัฐบาล และสถาบันการเงินที่ได้รับอนุญาตตามกระทรวงการคลัง
+          สามารถมอบอำนาจได้เฉพาะการจดทะเบียนสิทธิและนิติกรรมเกี่ยวกับ <br><strong>การจำนอง</strong> เท่านั้น</p>
       </div>
     </section>
 
@@ -221,35 +222,46 @@
       <div class="step-card">
         <div class="step-no">1</div>
         <div>
-          <strong>ตรวจว่าเอกสารเป็นโฉนดที่ดิน</strong>
-          <p>ยืนยันว่าเป็นหนังสือแสดงสิทธิประเภทโฉนดที่ดินในเขตจังหวัดอ่างทอง</p>
+          <strong>ตรวจที่ตั้งจังวัดของโฉนดที่ดิน</strong>
+          <p>ยืนยันว่าเป็นหนังสือแสดงสิทธิประเภทโฉนดที่ดินในเขตจังหวัดที่มีการประกาศเป็นสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</p>
         </div>
       </div>
       <div class="step-card">
         <div class="step-no">2</div>
         <div>
           <strong>ตรวจประเภทธุรกรรม</strong>
-          <p>ต้องเป็นรายการที่ไม่ต้องประกาศและไม่ต้องรังวัด เพื่อเข้าเกณฑ์ต่างสำนักงานแบบออนไลน์</p>
+          <p>ต้องเป็นประเภทที่ไม่ต้องประกาศและไม่ต้องรังวัด เพื่อเข้าเกณฑ์ต่างสำนักงานแบบออนไลน์</p>
         </div>
       </div>
       <div class="step-card">
         <div class="step-no">3</div>
         <div>
           <strong>ยื่นคำขอผ่าน e-QLands</strong>
-          <p>จองคิวนัดหมายล่วงหน้า และเลือกสำนักงานที่ดินที่สะดวกในเครือข่ายที่ประกาศรองรับ</p>
+          <p>จองคิวนัดหมายล่วงหน้า และเลือกสำนักงานที่ดิน<br>ที่สะดวกในเครือข่ายที่ประกาศเป็นสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</p>
         </div>
       </div>
       <div class="step-card">
         <div class="step-no">4</div>
         <div>
           <strong>ไปดำเนินการที่สำนักงานที่เลือก</strong>
-          <p>ผู้ขอต้องไปด้วยตนเอง พร้อมเอกสารตัวจริงและเอกสารประกอบตามรายการนัดหมาย</p>
+          <p>ผู้ขอต้องไปด้วยตนเอง พร้อมโฉนดตัวจริงและเอกสารหลักฐานทั้ง 2 ฝ่าย เช่น บัตรประจำตัวประชาชน ทะเบียนบ้าน ทะเบียนสมรส (ถ้ามี) <br>ประกอบตามรายการนัดหมาย</p>
         </div>
       </div>
 
+      <!-- <div class="doc-checklist">
+        <div class="doc-checklist-title"><i class="ph ph-file-text"></i> เอกสารที่ต้องเตรียม</div>
+        <ul class="doc-list">
+          <li><i class="ph ph-check-circle"></i> โฉนดที่ดิน (ตัวจริง)</li>
+          <li><i class="ph ph-check-circle"></i> บัตรประจำตัวประชาชน / พาสปอร์ต</li>
+          <li><i class="ph ph-check-circle"></i> สำเนาทะเบียนบ้าน (ถ้ามี)</li>
+          <li><i class="ph ph-check-circle"></i> เอกสารสัญญา / นิติกรรมที่ทำ</li>
+          <li><i class="ph ph-warning"></i> <em>ไม่ใช้เอกสารสำเนา — ต้องใช้ตัวจริงเท่านั้น</em></li>
+        </ul>
+      </div> -->
+
       <div class="callout warning" style="margin-top:auto;">
         <strong>วันที่มีผล</strong>
-        <p style="font-size:18px; font-weight:800; color:var(--green-900); line-height:1.25;">18 พฤษภาคม 2569</p>
+        <p style="font-size:32px; font-weight:800; color:var(--green-900); line-height:1.25;">18 พฤษภาคม 2569</p>
         <p>ประกาศโดย นายพรพจน์ เพ็ญพาส อธิบดีกรมที่ดิน</p>
       </div>
     </section>
@@ -275,12 +287,27 @@
         </div>
       </div>
 
-      <div class="datamap-wrap">
-        <img src="datamap.JPG" alt="แผนที่สำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์">
-
+      <div class="qr-service-box-v">
+        <div class="qr-v-top">
+          <span class="qr-scan-label"><i class="ph ph-qr-code"></i> สแกน QR เพื่อดูรายชื่อจังหวัดที่เปิดให้บริการแยกตามภาค</span>
+          <a class="qr-v-img" href="provinces.html" id="qr-provinces-link" title="เปิดหน้าจังหวัด" target="_blank">
+            <div id="qr-provinces" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"></div>
+          </a>
+          <p class="qr-v-desc">สแกนเพื่อดูภาพจังหวัดที่เปิดให้บริการ ครบทุกภาคทั่วประเทศ</p>
+        </div>
+        <div class="qr-v-regions">
+          <div class="qr-region-chip north"><i class="ph ph-mountains"></i> เหนือ <em>17</em></div>
+          <div class="qr-region-chip central"><i class="ph ph-building-office"></i> กลาง <em>20</em></div>
+          <div class="qr-region-chip ne"><i class="ph ph-sun"></i> อีสาน <em>16</em></div>
+          <div class="qr-region-chip east"><i class="ph ph-waves"></i> ตะวันออก <em>5</em></div>
+          <div class="qr-region-chip south"><i class="ph ph-island"></i> ใต้ <em>5</em></div>
+        </div>
+        <!-- <a class="qr-open-link" href="provinces.html" target="_blank">
+          <i class="ph ph-arrow-square-out"></i> เปิดดูหน้าจังหวัด
+        </a> -->
       </div>
 
-      <div class="region-grid">
+      <!-- <div class="region-grid">
         <div class="region-card north">
           <strong>ภาคเหนือ <em>17</em></strong>
           <span>จังหวัดในพื้นที่ภาคเหนือที่ประกาศรองรับ</span>
@@ -305,7 +332,7 @@
           <strong>รวมทั้งสิ้น <em>63</em></strong>
           <span>จำนวน 382 สำนักงานที่ดินทั่วประเทศ</span>
         </div>
-      </div>
+      </div> -->
 
       <div class="notice-footer">
         หมายเหตุ: การใช้บริการให้เป็นไปตามเงื่อนไข ประเภทเอกสาร และประเภทธุรกรรมที่กรมที่ดินกำหนด
@@ -456,6 +483,169 @@
       </footer>
     </div>
   </section>
+
+  <!-- PAGE 4: สไลด์ภาพจังหวัดที่เปิดให้บริการแต่ละภาค -->
+  <!-- <section class="region-slide-sheet" aria-label="สไลด์ภาพจังหวัดที่เปิดให้บริการ">
+    <div class="slide-header">
+      <div class="slide-header-inner">
+        <img class="slide-emblem" src="dol-emblem.png" alt="ตรากรมที่ดิน">
+        <div>
+          <div class="slide-badge"><i class="ph ph-map-trifold"></i> แผนภาพพื้นที่บริการ</div>
+          <h2 class="slide-title">จังหวัดที่เปิดให้บริการ<br><span>สำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</span></h2>
+        </div>
+      </div>
+      <p class="slide-desc">ภาพรวมจังหวัดในแต่ละภูมิภาคที่กรมที่ดินประกาศรองรับ ครอบคลุม 63 จังหวัด 382 สำนักงานทั่วประเทศ</p>
+    </div>
+
+    <div class="region-slides-container">
+      <div class="slides-track" id="slidesTrack">
+        <div class="slide-item active" data-region="ภาคเหนือ" data-count="17">
+          <img src="North.png" alt="จังหวัดภาคเหนือที่เปิดให้บริการ">
+          <div class="slide-overlay">
+            <div class="slide-region-badge north"><i class="ph ph-mountains"></i> ภาคเหนือ</div>
+            <div class="slide-count"><strong>17</strong><span>จังหวัด</span></div>
+          </div>
+        </div>
+        <div class="slide-item" data-region="ภาคกลาง" data-count="20">
+          <img src="middle.png" alt="จังหวัดภาคกลางที่เปิดให้บริการ">
+          <div class="slide-overlay">
+            <div class="slide-region-badge central"><i class="ph ph-building-office"></i> ภาคกลาง</div>
+            <div class="slide-count"><strong>20</strong><span>จังหวัด</span></div>
+          </div>
+        </div>
+        <div class="slide-item" data-region="ภาคตะวันออกเฉียงเหนือ" data-count="16">
+          <img src="Northeast.png" alt="จังหวัดภาคตะวันออกเฉียงเหนือที่เปิดให้บริการ">
+          <div class="slide-overlay">
+            <div class="slide-region-badge ne"><i class="ph ph-sun"></i> ภาคตะวันออกเฉียงเหนือ</div>
+            <div class="slide-count"><strong>16</strong><span>จังหวัด</span></div>
+          </div>
+        </div>
+        <div class="slide-item" data-region="ภาคตะวันออก" data-count="5">
+          <img src="east.png" alt="จังหวัดภาคตะวันออกที่เปิดให้บริการ">
+          <div class="slide-overlay">
+            <div class="slide-region-badge east"><i class="ph ph-waves"></i> ภาคตะวันออก</div>
+            <div class="slide-count"><strong>5</strong><span>จังหวัด</span></div>
+          </div>
+        </div>
+        <div class="slide-item" data-region="ภาคใต้" data-count="5">
+          <img src="South.png" alt="จังหวัดภาคใต้ที่เปิดให้บริการ">
+          <div class="slide-overlay">
+            <div class="slide-region-badge south"><i class="ph ph-island"></i> ภาคใต้</div>
+            <div class="slide-count"><strong>5</strong><span>จังหวัด</span></div>
+          </div>
+        </div>
+      </div>
+
+      Navigation Arrows
+      <button class="slide-arrow prev" id="slidePrev" aria-label="ก่อนหน้า"><i class="ph ph-caret-left"></i></button>
+      <button class="slide-arrow next" id="slideNext" aria-label="ถัดไป"><i class="ph ph-caret-right"></i></button>
+    </div>
+
+   
+    <div class="slide-dots" id="slideDots">
+      <button class="dot active" data-idx="0" aria-label="ภาคเหนือ"></button>
+      <button class="dot" data-idx="1" aria-label="ภาคกลาง"></button>
+      <button class="dot" data-idx="2" aria-label="ภาคตะวันออกเฉียงเหนือ"></button>
+      <button class="dot" data-idx="3" aria-label="ภาคตะวันออก"></button>
+      <button class="dot" data-idx="4" aria-label="ภาคใต้"></button>
+    </div>
+
+    Thumbnail strip -->
+    <!-- <div class="slide-thumbs">
+      <button class="thumb active" data-idx="0">
+        <img src="North.png" alt="ภาคเหนือ">
+        <span>ภาคเหนือ</span>
+        <em>17</em>
+      </button>
+      <button class="thumb" data-idx="1">
+        <img src="middle.png" alt="ภาคกลาง">
+        <span>ภาคกลาง</span>
+        <em>20</em>
+      </button>
+      <button class="thumb" data-idx="2">
+        <img src="Northeast.png" alt="ภาคตะวันออกเฉียงเหนือ">
+        <span>อีสาน</span>
+        <em>16</em>
+      </button>
+      <button class="thumb" data-idx="3">
+        <img src="east.png" alt="ภาคตะวันออก">
+        <span>ภาคตะวันออก</span>
+        <em>5</em>
+      </button>
+      <button class="thumb" data-idx="4">
+        <img src="South.png" alt="ภาคใต้">
+        <span>ภาคใต้</span>
+        <em>5</em>
+      </button>
+    </div> -->
+
+    <!-- <div class="slide-footer">
+      <div class="slide-total-badge">
+        <i class="ph ph-check-circle"></i>
+        รวม <strong>63 จังหวัด</strong> · <strong>382 สำนักงาน</strong> ทั่วประเทศ
+      </div>
+      <div class="slide-qr-note">
+        <i class="ph ph-qr-code"></i> สแกน QR เพื่อดูรายละเอียดเพิ่มเติม
+      </div>
+    </div>
+  </section> --> 
+
+  <script>
+    const track = document.getElementById('slidesTrack');
+    const items = track ? track.querySelectorAll('.slide-item') : [];
+    const dots  = document.querySelectorAll('#slideDots .dot');
+    const thumbs = document.querySelectorAll('.slide-thumbs .thumb');
+    let current = 0;
+    let autoTimer;
+
+    function goTo(idx) {
+      items[current].classList.remove('active');
+      dots[current].classList.remove('active');
+      thumbs[current].classList.remove('active');
+      current = (idx + items.length) % items.length;
+      items[current].classList.add('active');
+      dots[current].classList.add('active');
+      thumbs[current].classList.add('active');
+    }
+
+    document.getElementById('slidePrev')?.addEventListener('click', () => { goTo(current - 1); resetAuto(); });
+    document.getElementById('slideNext')?.addEventListener('click', () => { goTo(current + 1); resetAuto(); });
+    dots.forEach(d => d.addEventListener('click', () => { goTo(+d.dataset.idx); resetAuto(); }));
+    thumbs.forEach(t => t.addEventListener('click', () => { goTo(+t.dataset.idx); resetAuto(); }));
+
+    function resetAuto() { clearInterval(autoTimer); autoTimer = setInterval(() => goTo(current + 1), 4500); }
+    resetAuto();
+  </script>
+
+  <!-- Dynamic QR Code — generates provinces.html URL from current host -->
+  <script>
+    (function() {
+      // Build the provinces URL based on wherever this page is hosted
+      // Works on localhost/canva, any domain/path, etc.
+      const base = window.location.href.replace(/\/[^\/]*$/, '/');
+      const provincesUrl = base + 'provinces.html';
+
+      // Update the link href to full URL
+      const link = document.getElementById('qr-provinces-link');
+      if (link) link.href = provincesUrl;
+
+      // Generate QR inside the container
+      const container = document.getElementById('qr-provinces');
+      if (container && typeof QRCode !== 'undefined') {
+        new QRCode(container, {
+          text: provincesUrl,
+          width: 110,
+          height: 110,
+          colorDark: '#085c3e',
+          colorLight: '#ffffff',
+          correctLevel: QRCode.CorrectLevel.M
+        });
+        // Remove table border that QRCode.js sometimes adds
+        const tbl = container.querySelector('table');
+        if (tbl) tbl.style.cssText = 'border:0;border-collapse:collapse;';
+      }
+    })();
+  </script>
 </body>
 
 </html>

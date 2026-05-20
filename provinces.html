@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>จังหวัดที่เปิดให้บริการ | สำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</title>
+  <meta name="description"
+    content="รายชื่อจังหวัดที่เปิดให้บริการสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์ ครอบคลุม 63 จังหวัด 382 สำนักงานทั่วประเทศ">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <style>
+    :root {
+      --primary: #0F7B55;
+      --primary-d: #085c3e;
+      --primary-l: #19A974;
+      --gold: #F7C64D;
+      --sky: #148db3;
+      --rose: #d94176;
+      --accent: #FF7A00;
+      --bg: #F4F8F5;
+      --ink: #0d2b21;
+      --muted: #5b766f;
+      --line: rgba(15,123,85,.14);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Prompt', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      min-height: 100vh;
+      background-image:
+        radial-gradient(ellipse 70% 40% at 0% 0%, rgba(25,169,116,.18), transparent 55%),
+        radial-gradient(ellipse 55% 45% at 100% 100%, rgba(20,141,179,.12), transparent 55%);
+    }
+
+    /* ── Header ── */
+    .page-hero {
+      background: linear-gradient(140deg, var(--primary-d) 0%, var(--primary) 52%, var(--primary-l) 100%);
+      padding: 28px 24px 22px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::before {
+      content: "";
+      position: absolute; inset: 0; pointer-events: none;
+      background:
+        radial-gradient(circle at 88% 12%, rgba(247,198,77,.28), transparent 28%),
+        radial-gradient(circle at 12% 88%, rgba(20,141,179,.22), transparent 32%);
+    }
+    .hero-inner { position: relative; z-index: 1; max-width: 740px; margin: 0 auto; }
+    .hero-top { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 10px; }
+    .hero-emblem {
+      width: 58px; height: 58px; object-fit: contain; border-radius: 50%;
+      padding: 7px; background: #fff; border: 3px solid var(--gold);
+      box-shadow: 0 6px 22px rgba(0,0,0,.2);
+    }
+    .hero-brand { text-align: left; }
+    .hero-brand-name {
+      font-size: 11px; font-weight: 700; color: rgba(255,255,255,.72);
+      letter-spacing: .04em; display: block;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 4px 12px; border-radius: 999px; font-size: 11px; font-weight: 800;
+      background: #d64232; border: 1px solid rgba(255,255,255,.32);
+      margin-top: 4px;
+    }
+    .hero-badge i { font-size: 14px; color: #ffe08a; }
+    .page-hero h1 {
+      font-size: clamp(20px, 4vw, 28px); font-weight: 800; line-height: 1.22;
+      color: #fff5d4; text-shadow: 0 2px 14px rgba(0,0,0,.22); margin-bottom: 8px;
+    }
+    .page-hero p {
+      font-size: 13px; color: rgba(255,255,255,.84); line-height: 1.6; max-width: 560px; margin: 0 auto;
+    }
+    .stat-row {
+      display: flex; justify-content: center; gap: 10px; margin-top: 16px; flex-wrap: wrap;
+    }
+    .stat-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 8px 18px; border-radius: 999px; font-size: 13px; font-weight: 700;
+      background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.28);
+      backdrop-filter: blur(8px);
+    }
+    .stat-pill strong { color: #ffdf78; font-size: 18px; font-weight: 800; }
+
+    /* ── Tabs ── */
+    .tabs-wrap {
+      display: flex; justify-content: center; gap: 8px; padding: 18px 16px 0;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 9px 18px; border-radius: 999px; border: 2px solid transparent;
+      font-family: 'Prompt', sans-serif; font-size: 13px; font-weight: 700;
+      cursor: pointer; background: rgba(255,255,255,.82);
+      border-color: var(--line); color: var(--muted);
+      box-shadow: 0 2px 10px rgba(15,123,85,.07);
+      transition: all .22s;
+    }
+    .tab-btn i { font-size: 16px; }
+    .tab-btn.active, .tab-btn:hover {
+      background: var(--primary); color: #fff; border-color: var(--primary);
+      box-shadow: 0 6px 20px rgba(15,123,85,.28); transform: translateY(-1px);
+    }
+    .tab-btn.active.north,  .tab-btn:hover.north  { background:#e3494c; border-color:#e3494c; box-shadow:0 6px 20px rgba(227,73,76,.28); }
+    .tab-btn.active.central,.tab-btn:hover.central { background:var(--primary); border-color:var(--primary); }
+    .tab-btn.active.ne,     .tab-btn:hover.ne      { background:var(--sky); border-color:var(--sky); box-shadow:0 6px 20px rgba(20,141,179,.28); }
+    .tab-btn.active.east,   .tab-btn:hover.east    { background:var(--accent); border-color:var(--accent); box-shadow:0 6px 20px rgba(255,122,0,.28); }
+    .tab-btn.active.south,  .tab-btn:hover.south   { background:var(--rose); border-color:var(--rose); box-shadow:0 6px 20px rgba(217,65,118,.28); }
+    .tab-count {
+      display: inline-block; padding: 2px 8px; border-radius: 999px;
+      background: rgba(0,0,0,.15); font-size: 11px; font-weight: 800;
+    }
+
+    /* ── Main content ── */
+    .main-content {
+      max-width: 860px; margin: 18px auto 48px; padding: 0 16px;
+    }
+
+    /* Region panel */
+    .region-panel { display: none; }
+    .region-panel.active { display: block; animation: fadeUp .35s ease; }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(12px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .region-card-wrap {
+      background: #fff; border-radius: 24px;
+      box-shadow: 0 8px 36px rgba(15,123,85,.10);
+      border: 1px solid var(--line); overflow: hidden;
+    }
+
+    /* Image container */
+    .province-img-box {
+      position: relative; width: 100%;
+      background: #000;
+      overflow: hidden;
+    }
+    .province-img-box img {
+      width: 100%; display: block;
+      object-fit: contain; object-position: center;
+      max-height: 72vh;
+    }
+    .img-region-badge {
+      position: absolute; top: 18px; left: 18px;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 9px 20px; border-radius: 999px;
+      font-size: 15px; font-weight: 800; color: #fff;
+      backdrop-filter: blur(8px); border: 1.5px solid rgba(255,255,255,.28);
+      box-shadow: 0 4px 20px rgba(0,0,0,.26); z-index: 2;
+    }
+    .img-region-badge i { font-size: 20px; }
+    .img-region-badge.north   { background: rgba(227,73,76,.88); }
+    .img-region-badge.central { background: rgba(15,123,85,.88); }
+    .img-region-badge.ne      { background: rgba(20,141,179,.88); }
+    .img-region-badge.east    { background: rgba(255,122,0,.88); }
+    .img-region-badge.south   { background: rgba(217,65,118,.88); }
+
+    .img-count-badge {
+      position: absolute; bottom: 18px; right: 18px;
+      background: rgba(4,47,36,.82); backdrop-filter: blur(10px);
+      border-radius: 18px; padding: 10px 18px; text-align: right;
+      border: 1.5px solid rgba(255,255,255,.18); z-index: 2;
+    }
+    .img-count-badge strong {
+      display: block; font-size: 42px; font-weight: 800;
+      color: #ffdf78; line-height: 1; text-shadow: 0 2px 18px rgba(0,0,0,.35);
+    }
+    .img-count-badge span { font-size: 14px; font-weight: 600; color: rgba(255,255,255,.88); }
+
+    /* Info below image */
+    .province-info {
+      padding: 20px 24px 24px;
+    }
+    .province-info h2 {
+      font-size: 20px; font-weight: 800; color: var(--primary);
+      margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
+    }
+    .province-info h2 i { font-size: 22px; }
+    .province-info .subtitle {
+      font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 16px;
+    }
+
+    /* Province chips */
+    .province-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+    .province-chip {
+      padding: 6px 13px; border-radius: 999px; font-size: 12px; font-weight: 600;
+      background: #edf9f1; border: 1px solid rgba(15,123,85,.18); color: var(--primary);
+      transition: background .18s, transform .18s;
+    }
+    .province-chip:hover { background: #d5f4e2; transform: translateY(-1px); }
+    .north .province-chip   { background: #fff0f0; border-color: rgba(227,73,76,.18); color: #b83a3c; }
+    .north .province-chip:hover { background: #ffd8d8; }
+    .central .province-chip { background: #edf9f1; border-color: rgba(15,123,85,.18); color: var(--primary); }
+    .ne .province-chip      { background: #e8f6ff; border-color: rgba(20,141,179,.18); color: #0d6e8a; }
+    .ne .province-chip:hover { background: #c8ecfb; }
+    .east .province-chip    { background: #fff5ec; border-color: rgba(255,122,0,.18); color: #c55d00; }
+    .east .province-chip:hover { background: #ffe4c8; }
+    .south .province-chip   { background: #fff0f5; border-color: rgba(217,65,118,.18); color: #a0275a; }
+    .south .province-chip:hover { background: #ffd6e8; }
+
+    /* Divider rule */
+    .info-rule {
+      display: flex; align-items: center; gap: 10px; margin: 16px 0 12px;
+    }
+    .info-rule span {
+      font-size: 11px; font-weight: 700; color: var(--muted); white-space: nowrap;
+      letter-spacing: .04em;
+    }
+    .info-rule::before, .info-rule::after {
+      content: ""; flex: 1; height: 1px; background: var(--line);
+    }
+
+    /* ── Note box ── */
+    .note-box {
+      margin: 20px auto 0; max-width: 860px; padding: 0 16px;
+    }
+    .note-inner {
+      background: linear-gradient(135deg, #fff9e6, #fffef5);
+      border: 1.5px solid rgba(247,198,77,.45);
+      border-radius: 18px; padding: 16px 20px;
+      display: flex; gap: 12px; align-items: flex-start;
+      box-shadow: 0 4px 18px rgba(247,198,77,.12);
+    }
+    .note-inner i { font-size: 22px; color: #c48a00; flex: 0 0 auto; margin-top: 1px; }
+    .note-inner p { font-size: 12.5px; color: #5a4000; line-height: 1.65; }
+    .note-inner strong { color: #8a5c00; }
+
+    /* ── Footer ── */
+    .page-footer {
+      text-align: center; padding: 24px 16px;
+      font-size: 11.5px; color: var(--muted); line-height: 1.7;
+      border-top: 1px dashed var(--line);
+      margin-top: 12px;
+    }
+    .page-footer a { color: var(--primary); font-weight: 700; text-decoration: none; }
+    .page-footer a:hover { text-decoration: underline; }
+
+    /* ── Back button ── */
+    .back-btn {
+      position: fixed; bottom: 22px; right: 22px;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 999px; border: 0; cursor: pointer;
+      background: linear-gradient(135deg, var(--primary-d), var(--primary-l));
+      color: #fff; font-family: 'Prompt', sans-serif; font-size: 13px; font-weight: 700;
+      box-shadow: 0 8px 28px rgba(15,123,85,.32);
+      transition: transform .2s, box-shadow .2s; z-index: 999; text-decoration: none;
+    }
+    .back-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(15,123,85,.38); }
+    .back-btn i { font-size: 18px; }
+
+    @media (max-width: 600px) {
+      .tab-btn { font-size: 11px; padding: 7px 12px; }
+      .province-info h2 { font-size: 17px; }
+      .img-count-badge strong { font-size: 32px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Hero Header -->
+  <header class="page-hero">
+    <div class="hero-inner">
+      <div class="hero-top">
+        <img class="hero-emblem" src="dol-emblem.png" alt="ตรากรมที่ดิน">
+        <div class="hero-brand">
+          <span class="hero-brand-name">กรมที่ดิน กระทรวงมหาดไทย</span>
+          <div class="hero-badge">
+            <i class="ph ph-globe-hemisphere-east"></i>
+            พื้นที่ให้บริการทั่วประเทศ
+          </div>
+        </div>
+      </div>
+      <h1>จังหวัดที่เปิดให้บริการ<br>สำนักงานที่ดินอิเล็กทรอนิกส์<br>ต่างสำนักงานแบบออนไลน์</h1>
+      <p>เลือกภูมิภาคเพื่อดูรายชื่อจังหวัดที่กรมที่ดินประกาศให้บริการ<br>ผู้ขอสามารถยื่นคำขอจดทะเบียนสิทธิและนิติกรรม ณ สำนักงานที่ดินที่ประกาศรองรับได้</p>
+      <div class="stat-row">
+        <span class="stat-pill"><i class="ph ph-map-pin-line"></i> <strong>63</strong> จังหวัด</span>
+        <span class="stat-pill"><i class="ph ph-buildings"></i> <strong>382</strong> สำนักงาน</span>
+        <span class="stat-pill"><i class="ph ph-check-circle"></i> มีผลตั้งแต่ 18 พ.ค. 2569</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- Region Tabs -->
+  <div class="tabs-wrap" role="tablist" aria-label="เลือกภาค">
+    <button class="tab-btn north active" id="tab-north"   role="tab" aria-selected="true"  data-target="panel-north"   onclick="switchTab(this)">
+      <i class="ph ph-mountains"></i> ภาคเหนือ <span class="tab-count">17</span>
+    </button>
+    <button class="tab-btn central" id="tab-central" role="tab" aria-selected="false" data-target="panel-central" onclick="switchTab(this)">
+      <i class="ph ph-building-office"></i> ภาคกลาง <span class="tab-count">20</span>
+    </button>
+    <button class="tab-btn ne" id="tab-ne" role="tab" aria-selected="false" data-target="panel-ne" onclick="switchTab(this)">
+      <i class="ph ph-sun"></i> ภาคอีสาน <span class="tab-count">16</span>
+    </button>
+    <button class="tab-btn east" id="tab-east" role="tab" aria-selected="false" data-target="panel-east" onclick="switchTab(this)">
+      <i class="ph ph-waves"></i> ภาคตะวันออก <span class="tab-count">5</span>
+    </button>
+    <button class="tab-btn south" id="tab-south" role="tab" aria-selected="false" data-target="panel-south" onclick="switchTab(this)">
+      <i class="ph ph-island"></i> ภาคใต้ <span class="tab-count">5</span>
+    </button>
+  </div>
+
+  <!-- Main content -->
+  <main class="main-content">
+
+    <!-- ภาคเหนือ -->
+    <div class="region-panel active north" id="panel-north" role="tabpanel" aria-labelledby="tab-north">
+      <div class="region-card-wrap">
+        <div class="province-img-box">
+          <img src="North.png" alt="แผนภาพจังหวัดภาคเหนือที่เปิดให้บริการสำนักงานที่ดินออนไลน์">
+          <div class="img-region-badge north"><i class="ph ph-mountains"></i> ภาคเหนือ</div>
+          <div class="img-count-badge"><strong>17</strong><span>จังหวัด</span></div>
+        </div>
+        <div class="province-info north">
+          <h2><i class="ph ph-mountains"></i> ภาคเหนือ — 17 จังหวัด</h2>
+          <p class="subtitle">จังหวัดในพื้นที่ภาคเหนือที่กรมที่ดินประกาศให้เป็นสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</p>
+          <div class="info-rule"><span>รายชื่อจังหวัด</span></div>
+          <div class="province-chips">
+            <span class="province-chip">เชียงใหม่</span><span class="province-chip">เชียงราย</span>
+            <span class="province-chip">ลำปาง</span><span class="province-chip">ลำพูน</span>
+            <span class="province-chip">แพร่</span><span class="province-chip">น่าน</span>
+            <span class="province-chip">พะเยา</span><span class="province-chip">แม่ฮ่องสอน</span>
+            <span class="province-chip">อุตรดิตถ์</span><span class="province-chip">สุโขทัย</span>
+            <span class="province-chip">ตาก</span><span class="province-chip">กำแพงเพชร</span>
+            <span class="province-chip">พิษณุโลก</span><span class="province-chip">พิจิตร</span>
+            <span class="province-chip">เพชรบูรณ์</span><span class="province-chip">นครสวรรค์</span>
+            <span class="province-chip">อุทัยธานี</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ภาคกลาง -->
+    <div class="region-panel central" id="panel-central" role="tabpanel" aria-labelledby="tab-central">
+      <div class="region-card-wrap">
+        <div class="province-img-box">
+          <img src="middle.png" alt="แผนภาพจังหวัดภาคกลางที่เปิดให้บริการสำนักงานที่ดินออนไลน์">
+          <div class="img-region-badge central"><i class="ph ph-building-office"></i> ภาคกลาง</div>
+          <div class="img-count-badge"><strong>20</strong><span>จังหวัด</span></div>
+        </div>
+        <div class="province-info central">
+          <h2><i class="ph ph-building-office"></i> ภาคกลาง — 20 จังหวัด</h2>
+          <p class="subtitle">รวมกรุงเทพมหานคร อ่างทอง และจังหวัดในพื้นที่ภาคกลางที่กรมที่ดินประกาศรองรับ</p>
+          <div class="info-rule"><span>รายชื่อจังหวัด</span></div>
+          <div class="province-chips">
+            <span class="province-chip">กรุงเทพมหานคร</span><span class="province-chip">นนทบุรี</span>
+            <span class="province-chip">ปทุมธานี</span><span class="province-chip">สมุทรปราการ</span>
+            <span class="province-chip">สมุทรสาคร</span><span class="province-chip">นครปฐม</span>
+            <span class="province-chip">สุพรรณบุรี</span><span class="province-chip">กาญจนบุรี</span>
+            <span class="province-chip">ราชบุรี</span><span class="province-chip">เพชรบุรี</span>
+            <span class="province-chip">ประจวบคีรีขันธ์</span><span class="province-chip">สระบุรี</span>
+            <span class="province-chip">ลพบุรี</span><span class="province-chip">สิงห์บุรี</span>
+            <span class="province-chip">ชัยนาท</span><span class="province-chip">พระนครศรีอยุธยา</span>
+            <span class="province-chip">อ่างทอง</span><span class="province-chip">นครนายก</span>
+            <span class="province-chip">ฉะเชิงเทรา</span><span class="province-chip">สมุทรสงคราม</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ภาคอีสาน -->
+    <div class="region-panel ne" id="panel-ne" role="tabpanel" aria-labelledby="tab-ne">
+      <div class="region-card-wrap">
+        <div class="province-img-box">
+          <img src="Northeast.png" alt="แผนภาพจังหวัดภาคตะวันออกเฉียงเหนือที่เปิดให้บริการสำนักงานที่ดินออนไลน์">
+          <div class="img-region-badge ne"><i class="ph ph-sun"></i> ภาคตะวันออกเฉียงเหนือ</div>
+          <div class="img-count-badge"><strong>16</strong><span>จังหวัด</span></div>
+        </div>
+        <div class="province-info ne">
+          <h2><i class="ph ph-sun"></i> ภาคตะวันออกเฉียงเหนือ (อีสาน) — 16 จังหวัด</h2>
+          <p class="subtitle">จังหวัดในพื้นที่ภาคตะวันออกเฉียงเหนือที่กรมที่ดินประกาศรองรับ</p>
+          <div class="info-rule"><span>รายชื่อจังหวัด</span></div>
+          <div class="province-chips">
+            <span class="province-chip">นครราชสีมา</span><span class="province-chip">ขอนแก่น</span>
+            <span class="province-chip">อุดรธานี</span><span class="province-chip">อุบลราชธานี</span>
+            <span class="province-chip">สกลนคร</span><span class="province-chip">หนองคาย</span>
+            <span class="province-chip">บึงกาฬ</span><span class="province-chip">มุกดาหาร</span>
+            <span class="province-chip">กาฬสินธุ์</span><span class="province-chip">มหาสารคาม</span>
+            <span class="province-chip">ร้อยเอ็ด</span><span class="province-chip">เลย</span>
+            <span class="province-chip">ชัยภูมิ</span><span class="province-chip">บุรีรัมย์</span>
+            <span class="province-chip">สุรินทร์</span><span class="province-chip">ศรีสะเกษ</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ภาคตะวันออก -->
+    <div class="region-panel east" id="panel-east" role="tabpanel" aria-labelledby="tab-east">
+      <div class="region-card-wrap">
+        <div class="province-img-box">
+          <img src="east.png" alt="แผนภาพจังหวัดภาคตะวันออกที่เปิดให้บริการสำนักงานที่ดินออนไลน์">
+          <div class="img-region-badge east"><i class="ph ph-waves"></i> ภาคตะวันออก</div>
+          <div class="img-count-badge"><strong>5</strong><span>จังหวัด</span></div>
+        </div>
+        <div class="province-info east">
+          <h2><i class="ph ph-waves"></i> ภาคตะวันออก — 5 จังหวัด</h2>
+          <p class="subtitle">จังหวัดในพื้นที่ภาคตะวันออกที่กรมที่ดินประกาศรองรับ</p>
+          <div class="info-rule"><span>รายชื่อจังหวัด</span></div>
+          <div class="province-chips">
+            <span class="province-chip">ชลบุรี</span><span class="province-chip">ระยอง</span>
+            <span class="province-chip">จันทบุรี</span><span class="province-chip">ตราด</span>
+            <span class="province-chip">ปราจีนบุรี</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ภาคใต้ -->
+    <div class="region-panel south" id="panel-south" role="tabpanel" aria-labelledby="tab-south">
+      <div class="region-card-wrap">
+        <div class="province-img-box">
+          <img src="South.png" alt="แผนภาพจังหวัดภาคใต้ที่เปิดให้บริการสำนักงานที่ดินออนไลน์">
+          <div class="img-region-badge south"><i class="ph ph-island"></i> ภาคใต้</div>
+          <div class="img-count-badge"><strong>5</strong><span>จังหวัด</span></div>
+        </div>
+        <div class="province-info south">
+          <h2><i class="ph ph-island"></i> ภาคใต้ — 5 จังหวัด</h2>
+          <p class="subtitle">จังหวัดในพื้นที่ภาคใต้ที่กรมที่ดินประกาศรองรับ</p>
+          <div class="info-rule"><span>รายชื่อจังหวัด</span></div>
+          <div class="province-chips">
+            <span class="province-chip">ภูเก็ต</span><span class="province-chip">สุราษฎร์ธานี</span>
+            <span class="province-chip">สงขลา</span><span class="province-chip">พังงา</span>
+            <span class="province-chip">กระบี่</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Note -->
+  <div class="note-box">
+    <div class="note-inner">
+      <i class="ph ph-warning-circle"></i>
+      <p>
+        <strong>เงื่อนไขการใช้บริการ:</strong> ใช้ได้เฉพาะหนังสือแสดงสิทธิประเภท <strong>โฉนดที่ดิน</strong>
+        และต้องเป็นรายการที่ไม่ต้องประกาศหรือรังวัด · ผู้ขอต้องยื่นคำขอผ่านระบบ <strong>e-QLands</strong>
+        และไปดำเนินการด้วยตนเอง · ประชาชนทั่วไปไม่สามารถมอบอำนาจได้
+      </p>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="page-footer">
+    อ้างอิงจากประกาศกรมที่ดิน · ประกาศโดย นายพรพจน์ เพ็ญพาส อธิบดีกรมที่ดิน · มีผลบังคับใช้ 18 พฤษภาคม 2569<br>
+    สอบถามข้อมูล: สำนักงานที่ดินจังหวัดอ่างทอง โทร. 035 611 642
+    &nbsp;|&nbsp; <a href="index.html">← กลับหน้าหลัก</a>
+  </footer>
+
+  <!-- Floating back button -->
+  <a href="index.html" class="back-btn" id="btn-back">
+    <i class="ph ph-arrow-left"></i> กลับหน้าหลัก
+  </a>
+
+  <script>
+    function switchTab(btn) {
+      // Deactivate all
+      document.querySelectorAll('.tab-btn').forEach(b => {
+        b.classList.remove('active');
+        b.setAttribute('aria-selected', 'false');
+      });
+      document.querySelectorAll('.region-panel').forEach(p => p.classList.remove('active'));
+
+      // Activate clicked
+      btn.classList.add('active');
+      btn.setAttribute('aria-selected', 'true');
+      document.getElementById(btn.dataset.target).classList.add('active');
+    }
+
+    // Support hash navigation e.g. provinces.html#north
+    const hash = location.hash.replace('#','');
+    if (hash) {
+      const btn = document.getElementById('tab-' + hash);
+      if (btn) switchTab(btn);
+    }
+  </script>
+
+</body>
+</html>
