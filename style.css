@@ -488,10 +488,27 @@ body {
   border-top:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line);
 }
 .portrait-footer {
-  display:flex;justify-content:space-between;gap:12px;
+  display:flex;justify-content:space-between;align-items:center;gap:8px;
   margin-top:auto;padding-top:6px;
   border-top:1px dashed var(--line);
   color:var(--muted);font-size:9.5px;line-height:1.5;
+}
+.portrait-footer-qr {
+  display:flex;flex-direction:column;align-items:center;gap:4px;
+  flex:0 0 auto;
+}
+.portrait-qr-wrap {
+  display:block;width:18mm;height:18mm;
+  border-radius:10px;overflow:hidden;
+  border:3px solid #fff;
+  box-shadow:0 4px 14px rgba(15,123,85,.22);
+  background:#fff;flex:0 0 auto;
+  transition:transform .18s;
+}
+.portrait-qr-wrap:hover{transform:scale(1.05);}
+.portrait-footer-qr span {
+  font-size:8.5px;font-weight:700;color:var(--primary);
+  text-align:center;line-height:1.35;
 }
 
 /* ── Doc Checklist ── */

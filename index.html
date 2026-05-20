@@ -476,6 +476,12 @@
           อ้างอิงสาระสำคัญจากประกาศกรมที่ดิน<br>
           ประกาศโดย นายพรพจน์ เพ็ญพาส อธิบดีกรมที่ดิน
         </div>
+        <div class="portrait-footer-qr">
+          <a href="provinces.html" id="qr-portrait-link" target="_blank" class="portrait-qr-wrap">
+            <div id="qr-portrait" style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;"></div>
+          </a>
+          <span>สแกนเพื่อดู<br>จังหวัดที่เปิดให้บริการ</span>
+        </div>
         <div style="text-align:right;">
           สอบถามข้อมูลเพิ่มเติม<br>
           สำนักงานที่ดินจังหวัดอ่างทอง 035 611 642
@@ -629,21 +635,31 @@
       const link = document.getElementById('qr-provinces-link');
       if (link) link.href = provincesUrl;
 
-      // Generate QR inside the container
-      const container = document.getElementById('qr-provinces');
-      if (container && typeof QRCode !== 'undefined') {
-        new QRCode(container, {
-          text: provincesUrl,
-          width: 110,
-          height: 110,
-          colorDark: '#085c3e',
-          colorLight: '#ffffff',
-          correctLevel: QRCode.CorrectLevel.M
-        });
-        // Remove table border that QRCode.js sometimes adds
-        const tbl = container.querySelector('table');
-        if (tbl) tbl.style.cssText = 'border:0;border-collapse:collapse;';
+      // Helper: create QR in a container
+      function makeQR(containerId, size) {
+        const el = document.getElementById(containerId);
+        if (el && typeof QRCode !== 'undefined') {
+          new QRCode(el, {
+            text: provincesUrl,
+            width: size,
+            height: size,
+            colorDark: '#085c3e',
+            colorLight: '#ffffff',
+            correctLevel: QRCode.CorrectLevel.M
+          });
+          const tbl = el.querySelector('table');
+          if (tbl) tbl.style.cssText = 'border:0;border-collapse:collapse;';
+        }
       }
+
+      // Main brochure QR (large)
+      makeQR('qr-provinces', 110);
+      // Portrait A4 QR (small)
+      makeQR('qr-portrait', 52);
+
+      // Update portrait QR link
+      const portraitLink = document.getElementById('qr-portrait-link');
+      if (portraitLink) portraitLink.href = provincesUrl;
     })();
   </script>
 </body>
