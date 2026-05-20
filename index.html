@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>แผ่นพับ 3 ส่วน: สำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="print-toolbar">
+    <button class="print-button" onclick="window.print()">
+      <i class="ph ph-printer"></i>
+      พิมพ์ / บันทึกเป็น PDF
+    </button>
+    <span>ตั้งค่ากระดาษ A4 แนวนอน และปิด Margins เพื่อให้รอยพับตรง 3 ส่วน</span>
+  </div>
+
+  <!-- PAGE 1: ด้านนอกแผ่นพับ | ซ้ายพับเข้า | กลางปกหลัง | ขวาปกหน้า -->
+  <main class="sheet" aria-label="ด้านนอกแผ่นพับ">
+    <section class="panel light-panel">
+      <h2 class="panel-title">
+        <i class="ph ph-sparkle"></i>
+        วิเคราะห์สาระสำคัญ
+      </h2>
+      <p class="lead">
+        ประกาศฉบับนี้ทำให้อ่างทองเชื่อมกับเครือข่ายสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์
+        ประชาชนจึงเลือกสำนักงานที่ดินที่สะดวกกว่าได้ โดยยังยึดเงื่อนไขของงานทะเบียนที่ปลอดภัยและตรวจสอบได้
+      </p>
+
+      <div class="analysis-card">
+        <strong>จากระบบจังหวัดเดียว สู่บริการข้ามสำนักงาน</strong>
+        <p>เดิมอ่างทองเป็นสำนักงานที่ดินอิเล็กทรอนิกส์ตั้งแต่ 10 มีนาคม 2568
+          รอบนี้ยกระดับให้ทำรายการต่างสำนักงานแบบออนไลน์ได้</p>
+      </div>
+      <div class="analysis-card">
+        <strong>เป้าหมายหลักคือ ลดการเดินทาง</strong>
+        <p>ผู้มีที่ดินในจังหวัดอ่างทองไม่จำเป็นต้องย้อนกลับไปทำธุรกรรมที่อ่างทองเสมอไป
+          หากสำนักงานปลายทางอยู่ในเครือข่ายที่ประกาศรองรับ</p>
+      </div>
+      <div class="analysis-card">
+        <strong>ขอบเขตงานถูกคุมให้ชัด</strong>
+        <p>ใช้เฉพาะโฉนดที่ดิน และไม่รวมงานที่ต้องประกาศหรือรังวัด เพื่อให้การดำเนินการออนไลน์ต่างสำนักงานยังรัดกุม</p>
+      </div>
+      <div class="analysis-card">
+        <strong>เงื่อนไขตัวบุคคลสำคัญมาก</strong>
+        <p>ประชาชนทั่วไปต้องไปดำเนินการด้วยตนเอง ไม่สามารถมอบอำนาจได้ ยกเว้นบางหน่วยงานเฉพาะกรณีจำนอง</p>
+      </div>
+
+      <div class="notice-footer">
+        เงื่อนไขเป็นไปตามที่กรมที่ดินกำหนด
+      </div>
+    </section>
+
+    <section class="panel back-cover">
+      <h2 class="panel-title" style="color:#fff;">
+        <i class="ph ph-handshake"></i>
+        ช่องทางบริการ
+      </h2>
+
+      <div class="white-glow">
+        <strong>One Stop Service</strong><br>
+        จองคิวผ่านระบบ e-QLands แล้วไปทำธุรกรรมที่สำนักงานที่ดินที่เลือกไว้ ช่วยลดเวลาเดินทางและลดภาระประชาชน
+      </div>
+
+      <div class="metric-row">
+        <div class="mini-metric">
+          <strong>1</strong>
+          <span>ระบบจองคิว</span>
+        </div>
+        <div class="mini-metric">
+          <strong>63</strong>
+          <span>จังหวัดรองรับ</span>
+        </div>
+        <div class="mini-metric">
+          <strong>382</strong>
+          <span>สำนักงาน</span>
+        </div>
+      </div>
+
+      <div class="step-card" style="background:rgba(255,255,255,0.14); border-color:rgba(255,255,255,0.22);">
+        <div class="step-no">1</div>
+        <div>
+          <strong style="color:#ffdf78;">จองคิวนัดหมายล่วงหน้า</strong>
+          <p style="color:rgba(255,255,255,0.86);">ยื่นคำขอผ่านระบบนัดจดทะเบียนล่วงหน้า e-QLands</p>
+        </div>
+      </div>
+      <div class="step-card" style="background:rgba(255,255,255,0.14); border-color:rgba(255,255,255,0.22);">
+        <div class="step-no">2</div>
+        <div>
+          <strong style="color:#ffdf78;">เลือกสำนักงานที่สะดวก</strong>
+          <p style="color:rgba(255,255,255,0.86);">เลือกสำนักงานในจังหวัดที่ประกาศเป็นระบบออนไลน์ต่างสำนักงาน</p>
+        </div>
+      </div>
+      <div class="step-card" style="background:rgba(255,255,255,0.14); border-color:rgba(255,255,255,0.22);">
+        <div class="step-no">3</div>
+        <div>
+          <strong style="color:#ffdf78;">ไปดำเนินการด้วยตนเอง</strong>
+          <p style="color:rgba(255,255,255,0.86);">เตรียมเอกสารโฉนดที่ดินและเอกสารประกอบตามรายการนัดหมาย</p>
+        </div>
+      </div>
+
+      <div class="app-box">
+        <div class="app-row">
+          <div class="qr"><img src="qreqlands.jpg" alt="QR Code e-QLands"></div>
+          <div>
+            <strong style="display:block; font-size:15px;">ดาวน์โหลด e-QLands</strong>
+            <span
+              style="font-size:11.2px; line-height:1.45; display:block; opacity:.88;">ใช้จองคิวและยื่นคำขอก่อนเข้ารับบริการ</span>
+            <span class="store-pill"><i class="ph ph-apple-logo"></i> App Store</span>
+            <span class="store-pill"><i class="ph ph-google-play-logo"></i> Google Play</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px; font-size:11px; color:rgba(255,255,255,0.78); line-height:1.55;">
+        DOL Call Center: <strong style="color:#ffdf78;">035 611 642</strong><br>
+        สำนักงานที่ดินจังหวัดอ่างทอง
+      </div>
+    </section>
+
+    <section class="panel cover">
+      <div>
+        <img class="emblem" src="dol-emblem.png" alt="ตรากรมที่ดิน"><br>
+        <div class="official-ribbon">
+          <i class="ph ph-warning-circle"></i>
+          ประกาศสำคัญ
+        </div>
+        <p class="cover-agency">กรมที่ดิน กระทรวงมหาดไทย</p>
+        <h1 class="cover-title">
+          กำหนดให้<br>สำนักงานที่ดินจังหวัดอ่างทอง<br>เป็นสำนักงานที่ดินอิเล็กทรอนิกส์<br>ต่างสำนักงานแบบออนไลน์</h1>
+        <p class="cover-subtitle">
+          ผู้มีที่ดินในจังหวัดอ่างทองสามารถยื่นคำขอจดทะเบียนสิทธิและนิติกรรม ณ สำนักงานที่ดินที่ประกาศรองรับได้
+        </p>
+      </div>
+
+      <div class="hero-orbit">
+        <div class="inner">
+          <i class="ph ph-seal-warning"></i>
+          <span class="stamp-label">มีผลบังคับใช้ตั้งแต่</span>
+          <strong class="notice-date">18 พฤษภาคม 2569</strong>
+          <span class="stamp-note">จองคิวและยื่นคำขอผ่านระบบ e-QLands ก่อนเข้ารับบริการ</span>
+        </div>
+      </div>
+
+      <div class="stat-band">
+        <div class="stat-card">
+          <strong>โฉนดที่ดิน</strong>
+          <span>เฉพาะรายการที่เข้าเงื่อนไข</span>
+        </div>
+        <div class="stat-card">
+          <strong>ต้องไปเอง</strong>
+          <span>ประชาชนทั่วไปมอบอำนาจไม่ได้</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- PAGE 2: ด้านในแผ่นพับ | ซ้ายเงื่อนไข | กลางขั้นตอน | ขวาพื้นที่บริการ -->
+  <main class="sheet" aria-label="ด้านในแผ่นพับ">
+    <section class="panel soft-panel">
+      <h2 class="panel-title">
+        <i class="ph ph-check-circle"></i>
+        ใช้บริการได้เมื่อใด
+      </h2>
+      <p class="lead">
+        ให้ดู 3 เงื่อนไขพร้อมกัน: ประเภทเอกสาร ประเภทธุรกรรม และตัวผู้ดำเนินการ
+        หากครบตามนี้จึงเหมาะกับบริการต่างสำนักงานแบบออนไลน์
+      </p>
+
+      <div class="callout info">
+        <strong>ใช้ได้</strong>
+        <p>หนังสือแสดงสิทธิในที่ดินประเภท <strong>โฉนดที่ดิน</strong>
+          และเป็นงานจดทะเบียนสิทธิหรือนิติกรรมที่ไม่ต้องประกาศและไม่ต้องรังวัด</p>
+        <div class="chip-list">
+          <span class="chip">โฉนดที่ดิน</span>
+          <span class="chip">จดทะเบียนสิทธิ</span>
+          <span class="chip">ทำนิติกรรม</span>
+          <span class="chip">ยื่นผ่าน e-QLands</span>
+        </div>
+      </div>
+
+      <div class="callout danger">
+        <strong>ยังไม่เข้าเงื่อนไข</strong>
+        <p>รายการที่ต้องมีการประกาศหรือรังวัดต้องดำเนินการตามกระบวนงานปกติ เพราะต้องตรวจสอบพื้นที่และขั้นตอนเพิ่มเติม
+        </p>
+        <div class="chip-list">
+          <span class="chip no">ต้องประกาศ</span>
+          <span class="chip no">ต้องรังวัด</span>
+          <span class="chip no">เอกสารไม่ใช่โฉนด</span>
+        </div>
+      </div>
+
+      <div class="callout warning">
+        <strong>การมอบอำนาจ</strong>
+        <p>ประชาชนทั่วไปต้องไปดำเนินการด้วยตนเอง ไม่สามารถมอบอำนาจได้</p>
+      </div>
+
+      <div class="callout info">
+        <strong>ข้อยกเว้นเฉพาะกรณี</strong>
+        <p>หน่วยงานของรัฐ รัฐวิสาหกิจ องค์การรัฐบาล และสถาบันการเงิน
+          สามารถมอบอำนาจได้เฉพาะการจดทะเบียนสิทธิและนิติกรรมเกี่ยวกับ <strong>การจำนอง</strong> เท่านั้น</p>
+      </div>
+    </section>
+
+    <section class="panel light-panel">
+      <h2 class="panel-title">
+        <i class="ph ph-path"></i>
+        ลำดับขั้นตอน
+      </h2>
+      <p class="lead">
+        จัดขั้นตอนใหม่ให้ประชาชนเข้าใจง่าย: ตรวจเงื่อนไขก่อนจอง เลือกสำนักงาน เตรียมเอกสาร แล้วไปทำรายการตามนัด
+      </p>
+
+      <div class="step-card">
+        <div class="step-no">1</div>
+        <div>
+          <strong>ตรวจว่าเอกสารเป็นโฉนดที่ดิน</strong>
+          <p>ยืนยันว่าเป็นหนังสือแสดงสิทธิประเภทโฉนดที่ดินในเขตจังหวัดอ่างทอง</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-no">2</div>
+        <div>
+          <strong>ตรวจประเภทธุรกรรม</strong>
+          <p>ต้องเป็นรายการที่ไม่ต้องประกาศและไม่ต้องรังวัด เพื่อเข้าเกณฑ์ต่างสำนักงานแบบออนไลน์</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-no">3</div>
+        <div>
+          <strong>ยื่นคำขอผ่าน e-QLands</strong>
+          <p>จองคิวนัดหมายล่วงหน้า และเลือกสำนักงานที่ดินที่สะดวกในเครือข่ายที่ประกาศรองรับ</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-no">4</div>
+        <div>
+          <strong>ไปดำเนินการที่สำนักงานที่เลือก</strong>
+          <p>ผู้ขอต้องไปด้วยตนเอง พร้อมเอกสารตัวจริงและเอกสารประกอบตามรายการนัดหมาย</p>
+        </div>
+      </div>
+
+      <div class="callout warning" style="margin-top:auto;">
+        <strong>วันที่มีผล</strong>
+        <p style="font-size:18px; font-weight:800; color:var(--green-900); line-height:1.25;">18 พฤษภาคม 2569</p>
+        <p>ประกาศโดย นายพรพจน์ เพ็ญพาส อธิบดีกรมที่ดิน</p>
+      </div>
+    </section>
+
+    <section class="panel soft-panel">
+      <h2 class="panel-title">
+        <i class="ph ph-globe-hemisphere-east"></i>
+        พื้นที่สำนักงานที่เปิดให้บริการ
+      </h2>
+      <p class="lead">
+        ผู้ขอสามารถเลือกดำเนินการ ณ
+        สำนักงานที่ดินในจังหวัดที่กรมที่ดินประกาศให้เป็นสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์
+      </p>
+
+      <div class="service-summary" aria-label="สรุปพื้นที่ให้บริการ">
+        <div class="service-summary-card">
+          <strong>63</strong>
+          <span>จังหวัดที่เปิดให้บริการ</span>
+        </div>
+        <div class="service-summary-card">
+          <strong>382</strong>
+          <span>สำนักงานที่ดินทั่วประเทศ</span>
+        </div>
+      </div>
+
+      <div class="datamap-wrap">
+        <img src="datamap.JPG" alt="แผนที่สำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์">
+
+      </div>
+
+      <div class="region-grid">
+        <div class="region-card north">
+          <strong>ภาคเหนือ <em>17</em></strong>
+          <span>จังหวัดในพื้นที่ภาคเหนือที่ประกาศรองรับ</span>
+        </div>
+        <div class="region-card central">
+          <strong>ภาคกลาง <em>20</em></strong>
+          <span>รวมกรุงเทพฯ อ่างทอง และจังหวัดในพื้นที่ภาคกลาง</span>
+        </div>
+        <div class="region-card ne">
+          <strong>ภาคตะวันออกเฉียงเหนือ <em>16</em></strong>
+          <span>จังหวัดในพื้นที่ภาคตะวันออกเฉียงเหนือ</span>
+        </div>
+        <div class="region-card east">
+          <strong>ภาคตะวันออก <em>5</em></strong>
+          <span>ชลบุรี ตราด ปราจีนบุรี ระยอง และจันทบุรี</span>
+        </div>
+        <div class="region-card south">
+          <strong>ภาคใต้ <em>5</em></strong>
+          <span>ภูเก็ต สุราษฎร์ธานี สงขลา พังงา และกระบี่</span>
+        </div>
+        <div class="region-card central">
+          <strong>รวมทั้งสิ้น <em>63</em></strong>
+          <span>จำนวน 382 สำนักงานที่ดินทั่วประเทศ</span>
+        </div>
+      </div>
+
+      <div class="notice-footer">
+        หมายเหตุ: การใช้บริการให้เป็นไปตามเงื่อนไข ประเภทเอกสาร และประเภทธุรกรรมที่กรมที่ดินกำหนด
+      </div>
+    </section>
+  </main>
+
+  <!-- PAGE 3: เอกสารประกาศ A4 แนวตั้ง สำหรับติดบอร์ดหรือแจกเป็นแผ่นเดี่ยว -->
+  <section class="portrait-sheet" aria-label="ประกาศประชาสัมพันธ์ A4 แนวตั้ง">
+    <header class="portrait-hero">
+      <div class="portrait-header-row">
+        <img class="portrait-emblem" src="dol-emblem.png" alt="ตรากรมที่ดิน">
+        <div class="portrait-tag">
+          <i class="ph ph-warning-circle"></i>
+          ประกาศสำคัญ
+        </div>
+      </div>
+      <div style="font-size:12px; font-weight:700; color:rgba(255,255,255,0.78); letter-spacing:.04em;">
+        กรมที่ดิน กระทรวงมหาดไทย
+      </div>
+      <h1>กำหนดให้สำนักงานที่ดินจังหวัดอ่างทอง<br>เป็นสำนักงานที่ดินอิเล็กทรอนิกส์ต่างสำนักงานแบบออนไลน์</h1>
+      <p>
+        เพื่ออำนวยความสะดวกแก่ประชาชนผู้มีที่ดินในเขตจังหวัดอ่างทอง ให้สามารถยื่นคำขอจดทะเบียนสิทธิและทำนิติกรรม ณ
+        สำนักงานที่ดินที่ประกาศรองรับได้
+      </p>
+    </header>
+
+    <div class="portrait-content">
+      <section class="portrait-alert">
+        <div class="portrait-date">
+          <b>18 พ.ค. 2569</b>
+          <span>มีผลบังคับใช้เป็นต้นไป</span>
+        </div>
+        <div>
+          <strong>ใช้บริการผ่านระบบนัดจดทะเบียนล่วงหน้า e-QLands</strong>
+          <p>ผู้ขอต้องยื่นคำขอผ่านระบบก่อนเข้ารับบริการ และไปดำเนินการ ณ สำนักงานที่ดินที่เลือกไว้ด้วยตนเองตามวันนัดหมาย
+          </p>
+        </div>
+      </section>
+
+      <section class="portrait-facts" aria-label="สรุปสาระสำคัญ">
+        <div class="portrait-fact">
+          <i class="ph ph-file-text"></i>
+          <strong>เอกสารที่รองรับ</strong>
+          <span>หนังสือแสดงสิทธิประเภทโฉนดที่ดิน</span>
+        </div>
+        <div class="portrait-fact">
+          <i class="ph ph-check-circle"></i>
+          <strong>ประเภทธุรกรรม</strong>
+          <span>จดทะเบียนสิทธิและนิติกรรมที่ไม่ต้องประกาศหรือรังวัด</span>
+        </div>
+        <div class="portrait-fact">
+          <i class="ph ph-user-focus"></i>
+          <strong>การดำเนินการ</strong>
+          <span>ประชาชนทั่วไปต้องไปดำเนินการด้วยตนเอง</span>
+        </div>
+        <div class="portrait-fact">
+          <i class="ph ph-map-pin-line"></i>
+          <strong>พื้นที่บริการ</strong>
+          <span>เลือกสำนักงานที่ดินในจังหวัดที่ประกาศรองรับ</span>
+        </div>
+      </section>
+
+      <section class="portrait-columns">
+        <div class="portrait-box">
+          <h2><i class="ph ph-shield-check"></i> เงื่อนไขการใช้บริการ</h2>
+          <ul class="portrait-list">
+            <li><b>1</b><span>ที่ดินต้องอยู่ในเขตพื้นที่จังหวัดอ่างทอง และมีหนังสือแสดงสิทธิประเภทโฉนดที่ดิน</span></li>
+            <li><b>2</b><span>ธุรกรรมต้องเป็นรายการที่ไม่ต้องมีการประกาศ และไม่ต้องมีการรังวัด</span></li>
+            <li><b>3</b><span>ผู้ขอต้องจองคิวนัดหมายล่วงหน้าผ่านระบบ e-QLands เท่านั้น</span></li>
+            <li><b>4</b><span>ประชาชนทั่วไปไม่สามารถมอบอำนาจให้ผู้อื่นดำเนินการแทนได้</span></li>
+          </ul>
+        </div>
+
+        <div class="portrait-box">
+          <h2><i class="ph ph-path"></i> ขั้นตอนโดยสรุป</h2>
+          <ul class="portrait-list">
+            <li><b>1</b><span>ตรวจสอบว่าเอกสารเป็นโฉนดที่ดิน และรายการเข้าเงื่อนไขที่กำหนด</span></li>
+            <li><b>2</b><span>เข้าสู่ระบบ e-QLands เพื่อยื่นคำขอและจองคิวนัดหมายล่วงหน้า</span></li>
+            <li><b>3</b><span>เลือกสำนักงานที่ดินที่สะดวกในพื้นที่ที่กรมที่ดินประกาศเปิดให้บริการ</span></li>
+            <li><b>4</b><span>ไปดำเนินการด้วยตนเอง พร้อมเอกสารตัวจริงและเอกสารประกอบตามนัดหมาย</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="portrait-service">
+        <div class="portrait-service-top">
+          <div>
+            <h2><i class="ph ph-globe-hemisphere-east"></i> พื้นที่สำนักงานที่เปิดให้บริการ</h2>
+            <p>บริการครอบคลุมสำนักงานที่ดินที่กรมที่ดินประกาศรองรับทั่วประเทศ แบ่งตาม 5 ภูมิภาค</p>
+          </div>
+          <div class="service-big">
+            <div>
+              <strong>63</strong>
+              <span>จังหวัด</span>
+            </div>
+            <div>
+              <strong>382</strong>
+              <span>สำนักงาน</span>
+            </div>
+          </div>
+        </div>
+        <div class="portrait-region-grid">
+          <div class="portrait-region-item">
+            <strong>ภาคเหนือ <em>17</em></strong>
+            <span>เชียงใหม่ เชียงราย ลำปาง ลำพูน แพร่ น่าน พะเยา แม่ฮ่องสอน อุตรดิตถ์ สุโขทัย ตาก กำแพงเพชร พิษณุโลก พิจิตร เพชรบูรณ์ นครสวรรค์ อุทัยธานี</span>
+          </div>
+          <div class="portrait-region-item">
+            <strong>ภาคกลาง <em>20</em></strong>
+            <span>กรุงเทพฯ อ่างทอง นนทบุรี ปทุมธานี สมุทรปราการ สมุทรสาคร นครปฐม สุพรรณบุรี กาญจนบุรี ราชบุรี เพชรบุรี ประจวบ สระบุรี ลพบุรี สิงห์บุรี ชัยนาท อยุธยา อ่างทอง นครนายก ฉะเชิงเทรา</span>
+          </div>
+          <div class="portrait-region-item">
+            <strong>ภาคอีสาน <em>16</em></strong>
+            <span>นครราชสีมา ขอนแก่น อุดรธานี อุบลราชธานี สกลนคร หนองคาย บึงกาฬ มุกดาหาร กาฬสินธุ์ มหาสารคาม ร้อยเอ็ด เลย ชัยภูมิ บุรีรัมย์ สุรินทร์ ศรีสะเกษ</span>
+          </div>
+          <div class="portrait-region-item">
+            <strong>ภาคตะวันออก <em>5</em></strong>
+            <span>ชลบุรี ระยอง จันทบุรี ตราด ปราจีนบุรี</span>
+          </div>
+          <div class="portrait-region-item">
+            <strong>ภาคใต้ <em>5</em></strong>
+            <span>ภูเก็ต สุราษฎร์ธานี สงขลา พังงา กระบี่</span>
+          </div>
+          <div class="portrait-region-item" style="background:rgba(255,223,120,.18);border-color:rgba(255,223,120,.35);">
+            <strong style="color:#ffdf78;">รวม <em>63</em></strong>
+            <span style="color:rgba(255,255,255,.85);">จังหวัด / 382 สำนักงาน</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="portrait-note">
+        <strong style="color:var(--green-900); font-size:13px;">ข้อยกเว้นเกี่ยวกับการมอบอำนาจ</strong>
+        <p>
+          หน่วยงานของรัฐ รัฐวิสาหกิจ องค์การรัฐบาล และสถาบันการเงิน
+          สามารถมอบอำนาจในการทำนิติกรรมได้เฉพาะการจดทะเบียนสิทธิและนิติกรรมเกี่ยวกับการจำนองเท่านั้น
+        </p>
+      </section>
+
+      <footer class="portrait-footer">
+        <div>
+          อ้างอิงสาระสำคัญจากประกาศกรมที่ดิน<br>
+          ประกาศโดย นายพรพจน์ เพ็ญพาส อธิบดีกรมที่ดิน
+        </div>
+        <div style="text-align:right;">
+          สอบถามข้อมูลเพิ่มเติม<br>
+          สำนักงานที่ดินจังหวัดอ่างทอง 035 611 642
+        </div>
+      </footer>
+    </div>
+  </section>
+</body>
+
+</html>
